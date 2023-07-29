@@ -1,0 +1,270 @@
+#navbar-pinterest{
+	width:100%;
+	height:100%;
+	display: grid;
+	grid-template-columns: 10% 74% 16%;
+	grid-template-rows: 1fr;
+	
+}
+#headNav{
+	top:0px;
+	left:0px;
+	right:0px;
+	height:3.6rem;
+	position:fixed;
+	background-color: #f7cae4;
+	z-index: 200;
+}
+.finder{
+	grid-column: 2;
+	grid-row: 1;
+
+
+
+	align-self: center;
+	justify-self: center;
+}
+.searcher{
+	width: 50vw;
+	padding: 0.8rem;
+
+	border-radius: 2rem;
+	outline:none;
+
+	border: 0px;
+	background-color: #d6a1c0;
+	opacity:80%;
+
+	transition:border 0.1s;
+}
+.searcher:hover{
+	opacity:100%;
+}
+.searcher:focus{
+	border: 3px solid #997389;
+}
+
+
+#pinterest-icon{
+	grid-column:1;
+	align-self: center;
+	justify-self: left;
+	margin-left: 0.5rem;
+	opacity:80%;
+}
+#pinterest-icon:hover{
+	cursor: pointer;
+	opacity: 100%;
+}
+#pinterest-icon:active{
+	transform: scale(0.9);
+}
+
+.nav{
+	align-self: center;
+	justify-self: end;
+
+	display: flex;
+	align-items: center;
+	align-content: space-around;
+
+	width: 80%;
+	
+	margin-right: 1rem;
+
+	grid-column: 3;
+	grid-row: 1;
+}
+.navItem{
+	/*display:inline-block;
+	align-self: center;*/
+	margin-right: 0.5rem;
+	
+	margin: auto;
+	opacity: 70%;
+
+	padding: 0.4rem;
+
+	border-radius: 50%;
+	transition: transform 0.2s;
+}
+.navItem:hover{
+	/*border: 2px solid black;*/
+	background-color: #d6a1c0;
+	transform: scale(1.09);
+}
+.navItem:active{
+	transform: scale(0.9);
+}
+
+
+
+
+#content{
+	width: 100%;
+
+	
+
+	display: grid;	
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 24rem;
+	column-gap: 0rem;
+	row-gap: 0rem;
+
+	/*grid-auto-flow: column;*/
+	margin: 0px;
+	margin-top: 3.8rem;
+	padding:0px;
+
+	background-color: #f2e0ed;
+opacity: 1;
+background-image:  linear-gradient(135deg, #f7cae4 25%, transparent 25%), linear-gradient(225deg, #f7cae4 25%, transparent 25%), linear-gradient(45deg, #f7cae4 25%, transparent 25%), linear-gradient(315deg, #f7cae4 25%, #f2e0ed 25%);
+background-position:  18px 0, 18px 0, 0 0, 0 0;
+background-size: 18px 18px;
+background-repeat: repeat;
+
+}
+
+@media screen and (min-width: 200px)
+and (max-width: 800px) {
+
+	#content{
+		grid-template-columns: 1fr 1fr;
+	}
+	#notifications{
+		display: none;
+	}
+	#message{
+		display: none;
+	}
+
+}
+@media screen and (min-width: 800px)
+and (max-width: 900px) {
+
+	#content{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	#message{
+		display: none;
+	}
+
+}
+@media screen and (min-width: 900px)
+and (max-width: 1100px) {
+
+	#content{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+}
+@media screen and (min-width: 1100px)
+and (max-width: 1300px) {
+
+	#content{
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+}
+
+
+
+body{
+	background-color: #f2e0ed;
+}
+
+
+.card-image{
+	width: 12.5rem;
+	height:95%;
+
+	justify-self: center;
+	align-self: center;
+
+	border-radius: 0.8rem;
+
+	background-color:transparent;
+
+	overflow: hidden;
+	
+	display: grid;
+	grid-template-rows: 100% 0%;
+	grid-template-columns: 65% 20% 15%;
+	transition:grid-template-rows 0.2s, transform 0.16s;
+	
+	box-shadow: 0 3px 0.7rem 0.01rem dimgray	;
+
+
+}
+.card-image:hover{
+	opacity:90%;
+	cursor:zoom-in;
+
+
+	grid-template-rows: 90% 10%;
+
+
+	transform: scale(1.02);
+	
+}
+
+.dentro{
+	width:100%;
+	height:100%;
+	object-fit: cover;
+	transition: filter 0.1s;
+	grid-row: 1;
+	grid-column: 1/4;
+}
+.dentro:hover{
+	filter: blur(1px) contrast(30%);
+}
+
+.save{
+	grid-row: 2;
+	border: none;
+
+	background-color: #f4b8db;
+}
+
+.save:hover{
+	cursor: pointer;
+	background-color:#d6a1c0;
+}
+.save:active{
+	background-color: #f4d8fb;
+}
+
+.saveD{
+	grid-row: 2;
+	border: none;
+
+	background-color: #b8f4d1;
+	/*background-image:url('./../Assets/down.png');*/
+	
+	background-size: 100%;
+}
+.saveD:hover{
+	cursor: pointer;
+	background-color: #a1d6b7;
+}
+.saveD:active{
+	background-color: #f8f4f1;
+}
+
+.saveM{
+	grid-row: 2;
+	border: none;
+
+	background-color: #b8f4d1;
+	/*background-image:url('./../Assets/down.png');*/
+	
+	background-size: 100%;
+}
+.saveM:hover{
+	cursor: pointer;
+	background-color: #a1d6b7;
+}
+.saveM:active{
+	background-color: #f8f4f1;
+}
